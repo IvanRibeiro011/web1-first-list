@@ -19,12 +19,6 @@
     margin-bottom: 20px;
   }
   
-  main {
-    display: grid;  
-    grid-template-columns: 25% 75%;
-    min-height: 100vh;
-  } 
-  
   .cabecalho {
     padding: 15px;
     display: flex;
@@ -101,4 +95,29 @@
     main {
         flex-direction: row;
     }
+}
+
+@media (min-width: 48em) {
+  .cabecalho {
+      width: 25%;
+      height: 100vh;
+      float: left;
+      padding-right: 20px;
+  }
+
+  .conteudo {
+      width: 75%;
+      float: left;
+  }
+}
+
+@media (max-width: 48em) {
+  .cabecalho, .conteudo {
+      width: 100%;
+      flex-direction: column; 
+  }
+
+  .cabecalho {
+    align-items: center;
+  }
 }
